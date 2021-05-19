@@ -1,23 +1,54 @@
+import {useEffect, useState} from 'react';
+import {HashRouter, Switch, Route} from 'react-router-dom'
 
+import './sass/main.scss';
+
+//Components: 
+import Header from './components/Header'
+import Banner from './components/Banner'
+import Loader from './components/Loader'
+//Pages:
+import About from './pages/About';
+import Gallery from './pages/Gallery';
+import Instagram from './pages/Instagram';
+import Contact from './pages/Contact';
 
 function App() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    loading 
+    ? document.querySelector('body').classList.add('loading')
+    : document.querySelector('body').classList.remove('loading')
+  })
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+    <>
+      {loading ? (
+        <Loader setLoading={setLoading} />
+      ) : (
+        <>
+         <Header />
+         <Banner />
+         {!loading && (
+           <div className="transition-image final">
+             <img src={process.env.PUBLIC_URL + `/images/image-7.jpg`} alt='five girls in a pillow fight'/>
+           </div>
+         )} 
+
+          <Switch>
+            {/* <Route exact path="/" component={Banner}></Route> */}
+            <Route exact path="/about" component={About}></Route>
+            <Route exact path="/gallery" component={Gallery}></Route>
+            <Route exact path="/instagram" component={Instagram}></Route>
+            <Route exact path="/contact" component={Contact}></Route>
+          </Switch>
+        </>
+      )}
+    </>
+    </HashRouter>
   );
 }
 

@@ -1,0 +1,42 @@
+body .loading {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.loader {
+    .loader-inner {
+        .image-block {
+            position: absolute;
+            transform-origin: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.image-1 {
+                width: 400px;
+                left: 16%;
+                bottom: 14%;
+            }
+            &.image-2 {
+                width: 300px;
+                right: 12%;
+                top: 8%;
+            }
+            &.image-3 {
+                max-width: 400px;
+                width: 40%;
+                right: 20%;
+                bottom: 10%;
+            }
+            &.image-4 {
+                width: 280px;
+                left: 14%;
+                top: 12%;
+
+            }
+            img {
+                width: 100%;
+                object-fit: fill;
+            }
+        }
+    }
+}
