@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {HashRouter, Switch, Route} from 'react-router-dom'
-
+//
 import './sass/main.scss';
 
 //Components: 
@@ -25,29 +25,42 @@ function App() {
 
   return (
     <HashRouter>
-    <>
+  
       {loading ? (
         <Loader setLoading={setLoading} />
       ) : (
-        <>
+        <div className="container">
          <Header />
          <Banner />
          {!loading && (
            <div className="transition-image final">
-             <img src={process.env.PUBLIC_URL + `/images/image-7.jpg`} alt='five girls in a pillow fight'/>
+             <img src={process.env.PUBLIC_URL + `/images/image-8.jpg`} alt='wedding couple'/>
            </div>
          )} 
+         <About/>
+         <Gallery />
+         <Contact />
+         <Instagram />
 
+          
           <Switch>
-            {/* <Route exact path="/" component={Banner}></Route> */}
-            <Route exact path="/about" component={About}></Route>
-            <Route exact path="/gallery" component={Gallery}></Route>
-            <Route exact path="/instagram" component={Instagram}></Route>
-            <Route exact path="/contact" component={Contact}></Route>
+            <Route exact path="/about">
+              <About/>
+            </Route>
+            <Route path="/gallery">
+              <Gallery/>
+            </Route>
+            <Route path="/instagram">
+              <Instagram/>
+            </Route>
+            <Route path="/contact">
+              <Contact/>
+            </Route>
           </Switch>
-        </>
+
+        </div>
       )}
-    </>
+    
     </HashRouter>
   );
 }

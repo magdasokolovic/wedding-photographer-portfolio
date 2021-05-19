@@ -1,3 +1,9 @@
 body {
     background: $background;
   }
+
+.container {
+  max-width: 1500px;
+  min-height: 100vh;
+  margin: 0 auto;
+}

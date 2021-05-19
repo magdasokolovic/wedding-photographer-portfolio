@@ -3,7 +3,7 @@
     height: 156px;
     display: flex;
     justify-content: center;
-    padding: 0 108px;
+    // padding: 0 108px;
     color: $black;
 
     .header-inner {
@@ -46,7 +46,6 @@
                 border-bottom: 2px solid $black;
                 padding-bottom: 12px;
                 white-space: nowrap;
-
             }
         }
         .hamburger-menu {
@@ -61,6 +60,9 @@
             cursor: pointer;
             &.hover {
                 background: darken($color: $white, $amount: 12);
+            }
+            @media (min-width: $layout-breakpoint-medium) {
+                display: none;
             }
             span {
                 width: 20px;

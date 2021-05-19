@@ -30,6 +30,9 @@ const BannerDescriptionTop = ({title}) => {
         <div className={"banner-row"}>
             <div className="row-col">
                 <AnimatedLetters title={title}/>
+                {[...title].filter((letter, index)=>index===0 (
+                        <span className="decorated">{letter}</span>     
+                ))}
             </div>
 
             <div className="row-col">
@@ -55,7 +58,7 @@ const BannerScrollDown = ({title}) => {
 
 const BannerCenter = ({title, playMarquee}) => {
     return (
-        <div className={`banner-row marquee ${playMarquee} && "animate"`}>
+        <div className={`banner-row marquee ${playMarquee && "animate"}`}>
             <div className="marquee__inner">
                 <AnimatedLetters title={title} />
                 <AnimatedLetters title={title} />
