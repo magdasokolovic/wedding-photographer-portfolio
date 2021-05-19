@@ -26,6 +26,7 @@ const item = {
             duration: 1.6,
         },
     },
+    //in order for this exit to work you need to use AnimatePresence component
     exit: {
         opacity: 0,
         y: -200,
@@ -35,15 +36,24 @@ const item = {
         }
     }
 }
+
+const itemMain = {
+    hidden: {
+        opacity: 0,
+        y: 200,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            ease: [.6, 0.01, -.05, .95],
+            duration: 1.6,
+        }
+    }
+}
 const Loader = ({setLoading}) => {
 
-    useEffect(() =>{
-        const timer = setTimeout(() =>{
-            setLoading(false)
-        }, 4000)
-
-        return ()=>clearTimeout(timer)
-    })
+    
 
 
     return (
@@ -52,14 +62,18 @@ const Loader = ({setLoading}) => {
                     variants={container}
                     initial='hidden'
                     animate='show'
-                    exit='exit'>
+                    exit='exit'
+                    onAnimationComplete={()=>setLoading(false)}>
                     <ImageBlock id='image-1' variants={item}/>
-                    <div className="transition-image">
-                        <img
-                            src={process.env.PUBLIC_URL + `/images/image-7.jpg`}
+                    <motion.div className="transition-image"
+                    variants={itemMain}>
+                        <motion.img
+                            src={process.env.PUBLIC_URL + `/images/image-8.jpg`}
                             alt="bride with friends on the wedding morning"
+                            layoutId="main-image-1"
+                            transition= {{ease: [.6, 0.01, -.05, .95],duration: 1.6,}}
                         />
-                    </div>
+                    </motion.div>
                     <ImageBlock id='image-2' variants={item}/>
                     <ImageBlock id='image-3' variants={item}/>
                     <ImageBlock id='image-4' variants={item}/>
@@ -68,15 +82,17 @@ const Loader = ({setLoading}) => {
     )
 }
 
-export const ImageBlock = ({id}) => {
+export const ImageBlock = ({id, variants}) => {
     return (
-        <div className={`image-block ${id}`}>
+        <motion.div 
+        className={`image-block ${id}`} 
+        variants={variants}>
             <Image
                 src={process.env.PUBLIC_URL + `/images/${id}.webp`}
                 fallback={process.env.PUBLIC_URL + `/images/${id}.jpg`}
                 alt={id}
             />
-        </div>
+        </motion.div>
     )
 }
 

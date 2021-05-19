@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {HashRouter, Switch, Route} from 'react-router-dom'
-//
+import {motion, AnimatePresence, AnimateSharedLayout} from 'framer-motion'
 import './sass/main.scss';
 
 //Components: 
@@ -25,42 +25,48 @@ function App() {
 
   return (
     <HashRouter>
-  
-      {loading ? (
-        <Loader setLoading={setLoading} />
-      ) : (
-        <div className="container">
-         <Header />
-         <Banner />
-         {!loading && (
-           <div className="transition-image final">
-             <img src={process.env.PUBLIC_URL + `/images/image-8.jpg`} alt='wedding couple'/>
-           </div>
-         )} 
-         <About/>
-         <Gallery />
-         <Contact />
-         <Instagram />
-
-          
-          <Switch>
-            <Route exact path="/about">
-              <About/>
-            </Route>
-            <Route path="/gallery">
-              <Gallery/>
-            </Route>
-            <Route path="/instagram">
-              <Instagram/>
-            </Route>
-            <Route path="/contact">
-              <Contact/>
-            </Route>
-          </Switch>
-
-        </div>
-      )}
+      <AnimateSharedLayout type="crossfade">
+        <AnimatePresence>
     
+        {loading ? (
+          <motion.div key="loader">
+            {/* once the loader is complete the images fade out */}
+              <Loader setLoading={setLoading} />
+          </motion.div>
+        ) : (
+          <div className="container">
+          <Header />
+          <Banner />
+          {!loading && (
+            <div className="transition-image final">
+              <motion.img src={process.env.PUBLIC_URL + `/images/image-8.jpg`} alt='wedding couple' layoutId="main-image-1"/>
+            </div>
+          )} 
+          <About/>
+          <Gallery />
+          <Contact />
+          <Instagram />
+
+            
+            <Switch>
+              <Route exact path="/about">
+                <About/>
+              </Route>
+              <Route path="/gallery">
+                <Gallery/>
+              </Route>
+              <Route path="/instagram">
+                <Instagram/>
+              </Route>
+              <Route path="/contact">
+                <Contact/>
+              </Route>
+            </Switch>
+
+          </div>
+        )}
+      </AnimatePresence>
+    </AnimateSharedLayout>
     </HashRouter>
   );
 }
