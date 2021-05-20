@@ -28,7 +28,7 @@ const Banner = () => {
     useEffect(() => {
         setTimeout(()=>{
             setPlayMarquee(true)
-        }, 5000)
+        }, 2000)
     }, [])
 
     return (
@@ -44,8 +44,8 @@ const AnimatedLetters = ({title, disabled}) => (
     <motion.span className="row-title" 
         variants={disabled ? null : banner}
         initial='initial' animate='animate'>
-        {[...title].map((letter)=>(
-            <motion.span className="row-letter" variants={letterAnimation}>{letter}</motion.span>
+        {[...title].map((letter, index)=>(
+            <motion.span key={index} className="row-letter" variants={letterAnimation}>{letter}</motion.span>
         ))}
     </motion.span>
 )

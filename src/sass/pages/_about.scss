@@ -1,0 +1,24 @@
+.detailed-information {
+    margin-top: 200px;
+    height: 600px;
+
+    .about-container {
+        .about-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            h2 {
+                font-size: 2rem;
+              }
+              p {
+                font-size: 1rem;;
+                line-height: 28px;
+                font-weight: 400;
+                width: 800px;
+            }
+        }
+
+    }
+}
+

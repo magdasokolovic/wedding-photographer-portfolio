@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Image from './Image'
 import {motion} from 'framer-motion'
 
@@ -53,16 +53,15 @@ const itemMain = {
 }
 const Loader = ({setLoading}) => {
 
-    
-
-
     return (
             <div className="loader">
-                <motion.div className="loader-inner"
+                <motion.div 
+                    className="loader-inner"
                     variants={container}
                     initial='hidden'
                     animate='show'
                     exit='exit'
+                    //once the animation is complete is will hide the Loader component:
                     onAnimationComplete={()=>setLoading(false)}>
                     <ImageBlock id='image-1' variants={item}/>
                     <motion.div className="transition-image"
@@ -71,7 +70,7 @@ const Loader = ({setLoading}) => {
                             src={process.env.PUBLIC_URL + `/images/image-8.jpg`}
                             alt="bride with friends on the wedding morning"
                             layoutId="main-image-1"
-                            transition= {{ease: [.6, 0.01, -.05, .95],duration: 1.6,}}
+                            
                         />
                     </motion.div>
                     <ImageBlock id='image-2' variants={item}/>
@@ -85,6 +84,7 @@ const Loader = ({setLoading}) => {
 export const ImageBlock = ({id, variants}) => {
     return (
         <motion.div 
+        animate={{scale: .9, transition: {duration: 1,}}}
         className={`image-block ${id}`} 
         variants={variants}>
             <Image

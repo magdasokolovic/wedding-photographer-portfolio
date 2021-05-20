@@ -4,8 +4,9 @@ const Contact = () => {
     return (
         <div className="container">
             <h2>
-                Contact me form 
+                Interested?
             </h2>
+            <h3>Contact me!</h3>
         </div>
     )
 }
