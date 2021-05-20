@@ -1,19 +1,18 @@
-import React, { useRef } from 'react'
-//useEffect, 
+import React, { useRef} from 'react'
+
 import {imageData} from './Gallery-data'
 import GalleryItem from './GalleryItem'
 // import LocomotiveScroll from 'locomotive-scroll'
 
-
 const Gallery = () => {
+
     const ref = useRef(null)
     // useEffect(() => {
     //     if (ref) {
     //         new LocomotiveScroll({
     //             el: ref.current,
     //             smooth: true,
-    //             direction: 'horizontal',
-    //             multiplier: 0.5
+    //             direction: 'horizontal'
     //         })
     //     }
     // }, [])
