@@ -1,21 +1,21 @@
-import React, { useRef} from 'react'
+import React, { useRef, useEffect} from 'react'
 
 import {imageData} from './Gallery-data'
 import GalleryItem from './GalleryItem'
-// import LocomotiveScroll from 'locomotive-scroll'
+import LocomotiveScroll from 'locomotive-scroll'
 
 const Gallery = () => {
 
     const ref = useRef(null)
-    // useEffect(() => {
-    //     if (ref) {
-    //         new LocomotiveScroll({
-    //             el: ref.current,
-    //             smooth: true,
-    //             direction: 'horizontal'
-    //         })
-    //     }
-    // }, [])
+    useEffect(() => {
+        if (ref) {
+            new LocomotiveScroll({
+                el: ref.current,
+                smooth: true,
+                direction: 'horizontal'
+            })
+        }
+    }, [])
 
     const images = imageData.map((tupples, index) => 
         tupples.map((url, elementIndex)=>

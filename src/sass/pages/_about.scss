@@ -1,6 +1,6 @@
 .detailed-information {
     margin-top: 200px;
-    height: 600px;
+    // height: 600px;
 
     .about-container {
         .about-row {
@@ -20,17 +20,18 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                align-items: flex-start;
+                align-items: center;
             }
 
-            h2 {
-                font-size: 4rem;
-              }
+            // h2 {
+            //     font-size: 4rem;
+            //   }
               p {
-                font-size: 2rem;;
-                line-height: 28px;
-                font-weight: 400;
-                width: 800px;
+                text-align: center;
+                font-size: 3rem;;
+                line-height: 40px;
+                font-weight: 600;
+                width: 600px;
             }
         }
 

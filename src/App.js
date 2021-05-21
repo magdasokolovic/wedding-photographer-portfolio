@@ -10,7 +10,8 @@ import Header from './components/Header'
 import Banner from './components/Banner'
 import Loader from './components/Loader'
 //Pages:
-import About from './pages/About';
+import About from './components/About';
+import HomeVideo from './components/HomeVideo';
 // import Gallery from './pages/Gallery/Gallery';
 
 function App() {
@@ -46,16 +47,20 @@ function App() {
                     transition= {{ease: [.6, 0.01, -.05, .95],duration: 1.6,}}/>
                   </div>
                 )} 
-
-                <About/> 
-                {/* <Gallery/> */}
-
+               
+               <About />
+               <HomeVideo/>
                 </div>
                 
               </>
           )}
         </AnimatePresence>
       </AnimateSharedLayout>
+
+      {/* <Switch>
+        <Route exact to="/gallery" component={Gallery} />
+        <Route exact to="/about" component={About} />
+      </Switch> */}
     </BrowserRouter>
     
     

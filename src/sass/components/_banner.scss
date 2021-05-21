@@ -48,7 +48,7 @@
             height: 160px;
             width: 160px;
             border-radius: 100%;
-            background: $white;
+            background: $black;
             position: absolute;
             display: flex;
             align-items: center;
@@ -60,6 +60,7 @@
                 font-size: 18px;
                 font-weight: 600;
                 margin: 4px 0;
+                
             }
         }
     }
