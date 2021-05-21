@@ -12,6 +12,7 @@ import Loader from './components/Loader'
 //Pages:
 import About from './components/About';
 import HomeVideo from './components/HomeVideo';
+import ThreeDMask from './components/3d-mask/threeDMask';
 // import Gallery from './pages/Gallery/Gallery';
 
 function App() {
@@ -39,20 +40,22 @@ function App() {
             
             <>
               <div className="container">
-                <Header />
-                <Banner />
-                {!loading && (
-                  <div className="transition-image final">
-                    <motion.img src={process.env.PUBLIC_URL + `/images/image-8.jpg`} alt='wedding couple' layoutId="main-image-1"
-                    transition= {{ease: [.6, 0.01, -.05, .95],duration: 1.6,}}/>
-                  </div>
-                )} 
-               
-               <About />
-               <HomeVideo/>
-                </div>
+                    <Header />
+                    <Banner />
+                    {!loading && (
+                      <div className="transition-image final">
+                        <motion.img src={process.env.PUBLIC_URL + `/images/image-8.jpg`} alt='wedding couple' layoutId="main-image-1"
+                        transition= {{ease: [.6, 0.01, -.05, .95],duration: 1.6,}}/>
+                      </div>
+                    )} 
+                  
+                  <About />
+                  <HomeVideo/>
+              </div>
+
+                <ThreeDMask />
                 
-              </>
+            </>
           )}
         </AnimatePresence>
       </AnimateSharedLayout>
