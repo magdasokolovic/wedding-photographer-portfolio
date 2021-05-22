@@ -1,15 +1,14 @@
 import React, {Suspense, useRef} from "react";
-import "./threeDMask.scss";
+
 import {Html} from 'drei'
 import {Canvas, useFrame} from 'react-three-fiber'
 import {Section} from './section'
-import { useGLTF } from "@react-three/drei";
+import {useGLTF } from "@react-three/drei";
 
 
 const Model = () => {
-    const gltf = useGLTF('/scene.gltf', true)
+    const gltf = useGLTF('heart/scene.gltf', true)
     return <primitive object={gltf.scene} dispose={null}/>
-  
   }
   
   const Lights = () => {
@@ -39,7 +38,7 @@ const Model = () => {
   
   
   const HTMLContent = () => {
-  
+
     const ref = useRef()
     useFrame(() => (ref.current.rotation.y += 0.01))
     return (
