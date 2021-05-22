@@ -13,7 +13,7 @@ import {useInView} from 'react-intersection-observer'
              // if you scroll back up it won't show the animation for the second time
             triggerOnce: true,
             //to take for user loner to scroll until the animation occurs use rootMargin
-            rootMargin: '-300px'
+            rootMargin: '-300px',
         })
 
         useEffect(()=>{

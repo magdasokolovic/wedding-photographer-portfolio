@@ -1,13 +1,15 @@
-import React, {Suspense, useRef} from "react";
+import React, {Suspense, useRef, useEffect} from "react";
+import {useInView} from 'react-intersection-observer'
 
 import {Html} from 'drei'
 import {Canvas, useFrame} from 'react-three-fiber'
 import {Section} from './section'
 import {useGLTF } from "@react-three/drei";
 
+import {motion, useAnimation} from 'framer-motion'
 
 const Model = () => {
-    const gltf = useGLTF('heart/scene.gltf', true)
+    const gltf = useGLTF('heart-two/scene.gltf', true)
     return <primitive object={gltf.scene} dispose={null}/>
   }
   
@@ -45,7 +47,7 @@ const Model = () => {
       <Section factor={1.5} offset={1}>
         <group position={[0, 380, 0]}>
   
-          <mesh ref={ref} position={[0, 60, 0]}>
+          <mesh ref={ref} position={[0, 0, 0]}>
             <Model/>
           </mesh>
   
@@ -62,8 +64,34 @@ const Model = () => {
    
   }
 export default function ThreeDMask() {
+
+  const animation = useAnimation()
+  const [heartRef, inView] = useInView({
+       // if you scroll back up it won't show the animation for the second time
+      triggerOnce: true,
+      //in order to take user longer to scroll until the animation occurs use rootMargin
+      rootMargin: '-300px'
+  })
+
+  useEffect(()=>{
+      if (inView) {
+          animation.start('visible')
+      }
+  }, [animation, inView])
     return (
-        <div className="three-d-container">
+        <motion.div className="three-d-container" ref={heartRef}
+        animate={animation} 
+            initial="hidden" 
+            variants={{
+                visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {duration: .6, ease: [.6, 0.05, -.01, .9]}
+                },
+                hidden: {
+                    opacity: 0, y: 72,
+                }
+            }}>
             <Canvas
                 colorManagement
                 camera={{position: [0, 0, 120], fov: 100}}>
@@ -72,7 +100,7 @@ export default function ThreeDMask() {
                       <HTMLContent/>
                   </Suspense>
             </Canvas>
-        </div>
+        </motion.div>
     )
 }
 

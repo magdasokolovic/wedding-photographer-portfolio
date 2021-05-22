@@ -3,13 +3,13 @@ $font-header: 'Italiana', serif;
 
 .three-d-container {
 
-    background: #191919;
+  background: $background;
     transition: 0.4s ease-in-out;
     width: 100vw;
     height: 100vh;
     // width: 100%;
     // height: 100%;
-    margin: 0;
+    margin-bottom: 200px;
     padding: 0;
     overflow: hidden;
 }
@@ -39,7 +39,7 @@ $font-header: 'Italiana', serif;
     text-align: center;
     width: 100%;
     margin: 0 auto;
-    color: #fff;
+    color: $black;
     span {
       display: block;
     }
