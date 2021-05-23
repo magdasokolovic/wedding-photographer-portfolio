@@ -78,9 +78,10 @@ export default function ThreeDMask() {
           animation.start('visible')
       }
   }, [animation, inView])
+
     return (
         <motion.div className="three-d-container" ref={heartRef}
-        animate={animation} 
+          animate={animation} 
             initial="hidden" 
             variants={{
                 visible: {

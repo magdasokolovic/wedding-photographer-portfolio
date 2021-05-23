@@ -77,7 +77,7 @@ const HomeVideo = () => {
                     </motion.div>
                     <div className="featured-video">
                         <video loop autoPlay controls width="100%" src={video}>
-                            {/* <source src={video} type="video/mp4"/> */}
+
                         </video>
                     </div>
                 </Link>

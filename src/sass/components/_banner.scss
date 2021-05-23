@@ -95,24 +95,24 @@
     
 }
 
-.decorated {
-        color: $font-color;
-        text-shadow:  $a $b $background-letter,
-                $a+$c*1 $b $font-color,
-                $a+$c*2 $b $background-letter,
-                $a+$c*3 $b lighten($font-color, 5%),
-                $a+$c*4 $b $background-letter,
-                $a+$c*5 $b lighten($font-color, 10%),
-                $a+$c*6 $b $background-letter,
-                $a+$c*7 $b lighten($font-color, 10%),
-                $a+$c*8 $b $background-letter,
-                $a+$c*9 $b lighten($layer, 10%),
-                $a+$c*10 $b $background-letter,
-                $a+$c*11 $b lighten($layer, 10%),
-                $a+$c*12 $b $background-letter,
-                $a+$c*13 $b lighten($layer, 5%),
-                $a+$c*14 $b $background-letter,
-                $a+$c*15 $b $layer,
-                $a+$c*16 $b $background-letter,
-                $a+$c*17 $b $layer      
-}
+// .decorated {
+//         color: $font-color;
+//         text-shadow:  $a $b $background-letter,
+//                 $a+$c*1 $b $font-color,
+//                 $a+$c*2 $b $background-letter,
+//                 $a+$c*3 $b lighten($font-color, 5%),
+//                 $a+$c*4 $b $background-letter,
+//                 $a+$c*5 $b lighten($font-color, 10%),
+//                 $a+$c*6 $b $background-letter,
+//                 $a+$c*7 $b lighten($font-color, 10%),
+//                 $a+$c*8 $b $background-letter,
+//                 $a+$c*9 $b lighten($layer, 10%),
+//                 $a+$c*10 $b $background-letter,
+//                 $a+$c*11 $b lighten($layer, 10%),
+//                 $a+$c*12 $b $background-letter,
+//                 $a+$c*13 $b lighten($layer, 5%),
+//                 $a+$c*14 $b $background-letter,
+//                 $a+$c*15 $b $layer,
+//                 $a+$c*16 $b $background-letter,
+//                 $a+$c*17 $b $layer      
+// }
