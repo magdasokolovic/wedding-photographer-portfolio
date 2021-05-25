@@ -32,7 +32,7 @@ const Gallery = () => {
                         <div className="gallery">
                             {images}
                             <div className="gallery-helper" data-scroll data-scroll-speed={-1}>
-                                Scroll to discover more
+                                Keep scrolling
                             </div>
                             <div className="behind-text fill" data-scroll data-scroll-speed={-1}>
                                 I capture your love

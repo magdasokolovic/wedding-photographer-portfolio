@@ -1,14 +1,10 @@
 const galleryPhotos = [
-    // "./images/gallery-1.jpg",
-    // "./images/gallery-2.jpg", 
-    // "./images/gallery-3.jpg", 
-    // "./images/gallery-4.jpg", 
-    // "./images/gallery-5.jpg", 
-    "https://images.unsplash.com/photo-1603214924133-5c2c78471b73?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2VkZGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", 
-    "https://images.unsplash.com/photo-1609151162377-794faf68b02f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2VkZGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", 
-    "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2VkZGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", 
-    "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d2VkZGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", 
-    "https://images.unsplash.com/photo-1550005809-91ad75fb315f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHdlZGRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    "https://previews.dropbox.com/p/thumb/ABKSMck6E6_ngR0imlTq5urhBLsRLJbyH9TFZkVXYGyHGjRrEzdmcXIfJQyV3A-hLgQVLH41p2B8KkiSRGnuXLq6QPKt3N99AVahHKhqp3hBeMuOglztKNaaToV6uVSjgSOQ-KvtpqcXuLlChHfIoc8BVamrpxYD0xT2Grkx5qtpggRHZDRt-xEh6ihbEFMfIEX2-dExrWwm0gBhzr_8y_pZKyZT0PWTU-6O5q0zPcUOnQ/p.jpeg?size=512x512&size_mode=2",
+    "https://previews.dropbox.com/p/thumb/ABIAWsiyeaStHkf6HLN6D_JSzT5z5K1Dk6qJXTZHwoICR9W9npobW-hEOwPiQYoVIZ81to96KrUwdnagwz1J_Dsa-RiJI7bhQEwYZA4ljorfx5OwvXV0sEBp4IJxToOHOa01b9ObHme_2VPMu4PBvpFisAg1Af_FCLZDsACspp7rQtkiB4KKwdl27udGVI72Tfk8Wyjn4sE5dE2LQ96ehPu05ilQGKbwIAf06EbqolwJQA/p.jpeg?size=512x512&size_mode=2", 
+    "https://previews.dropbox.com/p/thumb/ABI1EiEU3C-Ofw6fqKNhYE7o69cFuZVkvlRHDDIcUuF9p00JOXooaA60RK-wVNEHGYlKxavnjMHdtzLtZrWYLSiaFJZo2m0QN8_Qu_GuUF5FObv0GvUnlg5uIwc8TdTcHR9LQgmVy24_MGTOMqlwahY1xiRFUhDVBc3enrZatbB28CKdSP8ZTuudhsNkWr35tvmWvkOL0jOt2gha75wHdLP2R_5EKQbnIazmNCvWADIpoQ/p.jpeg?size=512x512&size_mode=2", 
+    "https://previews.dropbox.com/p/thumb/ABKCrxgOnzy7lM43KpGx581dNA4GHHdUgyaex8S7CFig9Oe_thkZdfR53TVM3-8n26tIHqxH6e7FUYbBccPmF3uN-v9USmowLCXwtmwnV8P4H8_kBt9P35moGVYUAo0auo2WmIeO7SZxO_vTTjWYmB3zvcffi75xwAVirPEnjbqdPeNDRcoOaecymrbmmtCLljbrhOWUAC8w81zul5ZrdjTYrc_pani7ZAqk29Tp5IurXA/p.jpeg?size=512x512&size_mode=2", 
+    "https://previews.dropbox.com/p/thumb/ABJp33dE6k2Caz6e5nS3x-vPPbBj11Rs1R6ibVmksToYFJ935KUKYl7FGvCX_KEszGgyFfHrAu-0Q0dJFStcb5gTrb5LHv22mv9Ef4n4j9HGKjzjUbI5mlHR5yD-Q_3-dlYg0yRfPilGRaijyIbdyezkphbIkOS4j4VU-UEl4wSuJKjEpz7w53XMvYopMnxA7iXDsaCQxqh7w_fzAjzxL9u3flnNpRUWjhHJzdizdkgnWw/p.jpeg?size=512x512&size_mode=2"
+   
 ];
 
 const imageData = [galleryPhotos, galleryPhotos, galleryPhotos, galleryPhotos]

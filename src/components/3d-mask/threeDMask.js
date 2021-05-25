@@ -54,7 +54,7 @@ const Model = () => {
         <Html fullscreen>
               <div className="mask-container">
                    <h1 className="mask-title">
-                        Weddings are happening despite corona!
+                        ...nes meilė yra stipresnė už virusus!
                   </h1>
               </div>
           </Html>

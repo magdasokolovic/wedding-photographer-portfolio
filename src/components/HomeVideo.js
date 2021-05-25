@@ -3,7 +3,7 @@ import {useInView} from 'react-intersection-observer'
 
 import {Link} from 'react-router-dom';
 import {motion, useAnimation} from 'framer-motion'
-import video from '../video/bride-karina-final-muted.mp4'
+import video from '../video/final-bride-video.mp4'
 
 
 // Scroll behaviour:
@@ -65,19 +65,19 @@ const HomeVideo = () => {
                                     transition={{duration: .6, ease: [0.6, .05, -.01, .9]}}
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 101 57"
-                                    >
-                                    <path
-                                    d="M33 34H0V24h81.429L66 7.884 73.548 0l19.877 20.763.027-.029L101 28.618 73.829 57l-7.548-7.884L80.753 34H33z"
-                                    fill="#FFF"
-                                    fillRule="evenodd"
-                                    ></path>
+                                        >
+                                        <path
+                                        d="M33 34H0V24h81.429L66 7.884 73.548 0l19.877 20.763.027-.029L101 28.618 73.829 57l-7.548-7.884L80.753 34H33z"
+                                        fill="#FFF"
+                                        fillRule="evenodd"
+                                        ></path>
                                 </motion.svg>
                             </span>
                         </div>
                     </motion.div>
                     <div className="featured-video">
-                        <video loop autoPlay controls width="100%" src={video}>
-
+                        <video loop autoPlay width="100%" src={video}>
+                            {/* controls  */}
                         </video>
                     </div>
                 </Link>

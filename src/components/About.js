@@ -42,11 +42,7 @@ import {useInView} from 'react-intersection-observer'
                             <div className='about-row'>
                                 {/* <div className="about-content"> */}
                                     <p>
-                                    Contrary to popular belief, Lorem Ipsum is not simply random text.
-                                    It has roots in a piece of classical Latin literature from 45 BC,
-                                    making it over 2000 years old. Richard McClintock, a Latin
-                                    professor at Hampden-Sydney College in Virginia, looked up one of
-                                    the more obscure comes from a line in section 1.10.32.
+                                    Studijuojant dėstytojai turėjo labai skeptišką požiūrį dėl vestuvių fotografavimo. Sakydavo, kad tai ne menas, todėl ir mano požiūris buvo toks pat. Tačiau kartą mano draugai paprašė fotografuoti jų vestuvėse. Kai paviešinome tuoktuvių nuotraukas socialiniuose tinkluose, suaukiau labai didelio susidomėjimo ir prašymų fotografuoti vestuves. Kadangi nesu iš tų žmonių, kurie bijo, nutariau tam ryžtis.
                                     </p>
                                 {/* </div> */}
                                 

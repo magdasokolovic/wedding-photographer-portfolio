@@ -57,9 +57,7 @@ const BannerDescriptionTop = ({title}) => {
             <div className="row-col">
                 <AnimatedLetters title={title}
                 />
-                {/* {[...title].filter((letter, index)=>index==0 (
-                    <span className="decorated">{letter}</span>     
-            ))} */}
+
                 
             </div>
 
@@ -69,7 +67,7 @@ const BannerDescriptionTop = ({title}) => {
                 transition= 
                 {{ease: 'easeInOut',duration:1, delay: .4}}>
                 <span className="row-message">
-                Lorem excepteur quis ea et amet deserunt eu aliquip adipisicing veniam excepteur et nisi occaecat. Id ipsum dolor fugiat sit sunt cillum amet commodo incididunt. 
+                "Nuotraukose svarbiausia perteikti šilčiausius žmonių jausmus, atskleisti charizmą"
                 </span>
             </motion.div>
         </div>

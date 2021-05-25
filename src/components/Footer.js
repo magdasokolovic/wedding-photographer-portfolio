@@ -30,12 +30,12 @@ const Footer = () => {
                         </div>
                         
                         <div className="footer-social">
-                            <a href="/">
+                            <a href="https://www.instagram.com/anarosso_photography/?fbclid=IwAR1EzFcutx77Sl8ZwvF4QTejsJE7ma9PN83PDRBZ4Di9lgaAklLaBGxoxbE">
                                 <Instagram/>
                             </a>
                        
                         <div className="footer-social">
-                            <a href="/">
+                            <a href="https://www.facebook.com/anarossophotography">
                                 <Facebook/>
                             </a>
                         </div>
