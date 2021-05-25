@@ -7,6 +7,7 @@ import LocomotiveScroll from 'locomotive-scroll'
 const Gallery = () => {
 
     const ref = useRef(null)
+
     useEffect(() => {
         if (ref) {
             new LocomotiveScroll({
@@ -24,26 +25,22 @@ const Gallery = () => {
     )
 
     return (
-        <>
             <div className="main-container">
                 <div className="scroll-container" data-scroll-container ref={ref}>
                     
                     <div className="content">
                         <div className="gallery">
                             {images}
-                            <div className="gallery-helper">
+                            <div className="gallery-helper" data-scroll data-scroll-speed={-1}>
                                 Scroll to discover more
                             </div>
-                            <div className="behind-text fill">
-                                I capture the most precious moments
+                            <div className="behind-text fill" data-scroll data-scroll-speed={-1}>
+                                I capture your love
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-        </>
-        
     )
 }
 

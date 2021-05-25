@@ -21,7 +21,7 @@ const Footer = () => {
                             <a href="/">
                                 <Instagram/>
                             </a>
-                        </div>
+                       
                         <div className="footer-social">
                             <a href="/">
                                 <Facebook/>
@@ -32,12 +32,14 @@ const Footer = () => {
                                 <Vimeo/>
                             </a>
                         </div>
+                        </div>
                     </div>
 
                 </div>
             </div>
-            
         </div>
+            
+       
     )
 }
 

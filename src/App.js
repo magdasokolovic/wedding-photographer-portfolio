@@ -3,7 +3,7 @@ import {BrowserRouter} from 'react-router-dom'
 //, Switch, Route
 import {motion, AnimatePresence, AnimateSharedLayout} from 'framer-motion'
 // context: 
-import { GlobalProvider } from './context/globalContext';
+// import { GlobalProvider } from './context/globalContext';
 // , useGlobalDispatchContext, useGlobalStateContext
 import './sass/main.scss';
 
@@ -17,10 +17,7 @@ import HomeVideo from './components/HomeVideo';
 import ThreeDMask from './components/3d-mask/threeDMask';
 import CustomCursor from './components/customCursor';
 import Footer from './components/Footer';
-// import Gallery from './pages/Gallery/Gallery';
-
-
-
+import Gallery from './pages/Gallery/Gallery';
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -30,22 +27,13 @@ function App() {
     ? document.querySelector('body').classList.add('loading')
     : document.querySelector('body').classList.remove('loading')
   })
-  // const dispatch = useGlobalDispatchContext()
-  // const {cursorStyles} = useGlobalStateContext()
 
-  // const onCursor = cursorType => {
-  //   cursorType = (cursorStyles.includes(cursorType) && cursorType) || false
-  //   dispatch({type: 'CURSOR_TYPE', cursorType: cursorType})
-  // }
 
 
   return (
-    <GlobalProvider>
-      
-      <BrowserRouter>
-      <CustomCursor/>
           <AnimateSharedLayout type="crossfade">
             <AnimatePresence>
+            <CustomCursor/>
         
             {loading ? (
               <motion.div key="loader">
@@ -70,21 +58,35 @@ function App() {
                     <HomeVideo/>
                     <ThreeDMask />
                     <Footer/>
+                    
                 </div>
+
+                <iframe
+                  title="gallery"
+                  src="/?gallery"
+                  style={{height: "100vh", width: "100%"}}
+                />
+                
+
               </>
             )}
           </AnimatePresence>
         </AnimateSharedLayout>
 
-        {/* <Switch>
-          <Route exact to="/gallery" component={Gallery} />
-          <Route exact to="/about" component={About} />
-        </Switch> */}
-      </BrowserRouter>
-    </GlobalProvider>
     
     
   );
 }
 
-export default App;
+function RoutedApp() {
+  console.warn(window.location.search);
+
+  return (
+    <BrowserRouter>
+      {window.location.search.includes("?gallery") ? <Gallery /> : <App />}
+    </BrowserRouter>
+
+  )
+}
+
+export default RoutedApp;

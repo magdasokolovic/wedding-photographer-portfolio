@@ -4,7 +4,7 @@ import {motion, useAnimation} from 'framer-motion'
 
 //to capture scroll behaviour:
 import {useInView} from 'react-intersection-observer'
-import Image from './Image'
+
 
 
     const About = ({id}) => {
@@ -40,14 +40,7 @@ import Image from './Image'
                 <div className='detailed-information' >
                         <div className='about-container'>
                             <div className='about-row'>
-                                <div className="about-image">
-                                <Image
-                                    src={process.env.PUBLIC_URL + `/images/image-6.webp`}
-                                    fallback={process.env.PUBLIC_URL + `/images/image-6.jpg`}
-                                    alt={id}
-                                    />
-                                </div>
-                                <div className="about-content">
+                                {/* <div className="about-content"> */}
                                     <p>
                                     Contrary to popular belief, Lorem Ipsum is not simply random text.
                                     It has roots in a piece of classical Latin literature from 45 BC,
@@ -55,7 +48,7 @@ import Image from './Image'
                                     professor at Hampden-Sydney College in Virginia, looked up one of
                                     the more obscure comes from a line in section 1.10.32.
                                     </p>
-                                </div>
+                                {/* </div> */}
                                 
                             </div>
                         </div>

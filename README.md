@@ -39,3 +39,7 @@
 
 - ### [Locomotive Scroll](https://github.com/locomotivemtl/locomotive-scroll) 
 Detection of elements in viewport & smooth scrolling with parallax effects.
+
+- In order to get a parallax effect add "data-scroll" and speed, for example: "data-scroll-speed={-1}" to the element
+
+- ### Intersection Observer API 
