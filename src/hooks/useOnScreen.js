@@ -12,7 +12,7 @@ function useOnScren(ref) {
                 setIntersecting(entry.isIntersecting ?? false)
             },
             {
-                theshold: 0.9 // meaning that 90% of the element should be visible in order for change to occur
+                theshold: 0.9 //A threshold of 0.9 means that when 90% of the target is visible within the element specified by the root option, the callback is invoked.
             }
         )
 

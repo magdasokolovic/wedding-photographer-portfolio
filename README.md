@@ -56,5 +56,10 @@ Detection of elements in viewport & smooth scrolling with parallax effects.
 - ### [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) and useInView hook from 'react-intersection-observer' 
 - they tell  when an element enters or leaves the viewport. 
 
-5. In order to make horizontall-scroll Gallery work on my main Page which is made with a help of framer-motion I needed to add the gallery component to [iFrame](https://www.hostinger.com/tutorials/what-is-iframe/) : 
+- ### [react-three-fiber](react-three-fiber)[https://docs.pmnd.rs/react-three-fiber/getting-started/loading-models]
+- ### [https://github.com/pmndrs/drei](https://github.com/pmndrs/drei) 
+
+- A growing collection of useful helpers and abstractions for react-three-fiber.
+
+- In order to make horizontall-scroll Gallery work on my main Page which is made with a help of framer-motion I needed to add the gallery component to [iFrame](https://www.hostinger.com/tutorials/what-is-iframe/) : 
 > > An iFrame is a frame within a frame. It is a component of an HTML element that allows you to embed documents, videos, and interactive media within a page.
