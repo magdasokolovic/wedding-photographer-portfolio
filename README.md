@@ -1,7 +1,11 @@
 # Wedding Photographer Portfolio
 
-### Tutorials I am using: 
-[Smooth Loading Transitions with Framer Motion. AnimateSharedLayout](https://www.notion.so/Framer-motion-AnimateSharedLayout-9e35e454cb5c4341a618a213558a857e)
+### Tutorials I used: 
+- [Smooth Loading Transitions with Framer Motion. AnimateSharedLayout](https://www.notion.so/Framer-motion-AnimateSharedLayout-9e35e454cb5c4341a618a213558a857e)
+- [Building with React and Three.js using React Three Fiber](https://www.youtube.com/watch?v=Qs9A3XIjbg4)
+- [Horizontal Scroll Gallery and Reveal Effect Part 1 (Created with Locomotive Scroll & React)](https://www.youtube.com/watch?v=_T_VMwD-AnY)
+- [Horizontal Scroll Gallery and Reveal Effect Part 2 (Created with Locomotive Scroll & React)](https://www.youtube.com/watch?v=SCkmUTaUGCk&t=359s)
+- [Creating Custom Web Cursor in React](https://www.youtube.com/watch?v=m5oouFzHf7w)
 
 ## Things I learn about: 
 
@@ -36,10 +40,21 @@
 'exit' - When the component unmounts (Requires Animate Presence)
 
 4. Animate Presence component animates components when they're removed from the React tree. It's required to enable exit animations with this component. **Usage:** Wrap one or more motion components with *AnimatePresence*. This enables the use of an exit prop, which can define a state for the component to animate to before it's unmounted from the DOM.
+5. about useAnimation() 
+> > : AnimationControls
+
+Creates AnimationControls, which can be used to manually start, stop and sequence animations on one or more components.
+
+The returned AnimationControls should be passed to the animate property of the components you want to animate.
+
+These components can then be animated with the **start** method.
 
 - ### [Locomotive Scroll](https://github.com/locomotivemtl/locomotive-scroll) 
 Detection of elements in viewport & smooth scrolling with parallax effects.
+- In order to get a parallax effect add "data-scroll" and speed, for example: "data-scroll-speed={-1}" to the element 
 
-- In order to get a parallax effect add "data-scroll" and speed, for example: "data-scroll-speed={-1}" to the element
+- ### [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) and useInView hook from 'react-intersection-observer' 
+- they tell  when an element enters or leaves the viewport. 
 
-- ### Intersection Observer API 
+5. In order to make horizontall-scroll Gallery work on my main Page which is made with a help of framer-motion I needed to add the gallery component to [iFrame](https://www.hostinger.com/tutorials/what-is-iframe/) : 
+> > An iFrame is a frame within a frame. It is a component of an HTML element that allows you to embed documents, videos, and interactive media within a page.

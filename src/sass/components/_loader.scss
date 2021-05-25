@@ -12,7 +12,7 @@ body .loading {
             align-items: center;
             justify-content: center;
             &.image-1 {
-                width: 150px;
+                width: 400px;
                 left: 16%;
                 bottom: 14%;
             }
@@ -22,7 +22,7 @@ body .loading {
                 top: 8%;
             }
             &.image-3 {
-                max-width: 150px;
+                max-width: 400px;
                 width: 40%;
                 right: 20%;
                 bottom: 10%;
@@ -31,7 +31,6 @@ body .loading {
                 width: 280px;
                 left: 14%;
                 top: 12%;
-
             }
             img {
                 width: 100%;

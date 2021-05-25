@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
-import {BrowserRouter} from 'react-router-dom'
-//, Switch, Route
+import {HashRouter} from 'react-router-dom'
+
 import {motion, AnimatePresence, AnimateSharedLayout} from 'framer-motion'
 // context: 
 // import { GlobalProvider } from './context/globalContext';
@@ -50,7 +50,7 @@ function App() {
                       {!loading && (
                         <div className="transition-image final">
                           <motion.img src={process.env.PUBLIC_URL + `/images/image-8.jpg`} alt='wedding couple' layoutId="main-image-1"
-                          transition= {{ease: [.6, 0.01, -.05, .95],duration: 1.6,}}/>
+                          transition= {{ease: [.6, 0.01, -.05, .95],duration: 1.6}}/>
                         </div>
                       )} 
                     
@@ -82,9 +82,9 @@ function RoutedApp() {
   console.warn(window.location.search);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {window.location.search.includes("?gallery") ? <Gallery /> : <App />}
-    </BrowserRouter>
+    </HashRouter>
 
   )
 }

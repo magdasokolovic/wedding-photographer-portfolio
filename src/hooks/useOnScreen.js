@@ -6,7 +6,7 @@ function useOnScren(ref) {
 
     useEffect(()=>{
         const observer = new IntersectionObserver(
-            //first value is callback, second is options:
+            //first value is a callback function, second is options:
             ([entry])=>{
                 //Update the state with new values:
                 setIntersecting(entry.isIntersecting ?? false)

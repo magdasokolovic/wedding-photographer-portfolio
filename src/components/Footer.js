@@ -1,11 +1,23 @@
 import React from 'react'
 import {Instagram, Facebook, Vimeo} from '../svg/social-icons'
+import {motion} from 'framer-motion';
+const transition = {duration: 1.4, ease: [.6, .01, -.05, .9]}
+
+
 const Footer = () => {
     return (
         <div className="container">
             <div className="footer-nav">
                 <div className="footer-container">
-                    <div className="footer-flex-container">
+                    <motion.div className="footer-flex-container" 
+                    initial={{
+                        opacity: 0, 
+                        y: 40}}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      transition= {{delay: 1.2, ...transition}}>
                         <div className="footer-content">
                             <p>015204248662</p>
                             <p>magda.sokolovic@gmail.com</p>
@@ -33,7 +45,7 @@ const Footer = () => {
                             </a>
                         </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>

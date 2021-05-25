@@ -7,7 +7,7 @@ import {useInView} from 'react-intersection-observer'
 
 
 
-    const About = ({id}) => {
+    const About = () => {
         const animation = useAnimation()
         const [contentRef, inView] = useInView({
              // if you scroll back up it won't show the animation for the second time

@@ -54,7 +54,7 @@ const itemMain = {
 const Loader = ({setLoading}) => {
 
     return (
-            <div className="loader">
+            <motion.div className="loader">
                 <motion.div 
                     className="loader-inner"
                     variants={container}
@@ -77,14 +77,15 @@ const Loader = ({setLoading}) => {
                     <ImageBlock id='image-3' variants={item}/>
                     <ImageBlock id='image-4' variants={item}/>
                 </motion.div>
-            </div>
+            </motion.div>
     )
 }
 
-export const ImageBlock = ({id, variants}) => {
+export const ImageBlock = ({id, variants, posY, posX}) => {
     return (
         <motion.div 
-        animate={{scale: .9, transition: {duration: 1,}}}
+        style={{ top: `${posY}vh`,
+        left: `${posX}vw `,}}
         className={`image-block ${id}`} 
         variants={variants}>
             <Image

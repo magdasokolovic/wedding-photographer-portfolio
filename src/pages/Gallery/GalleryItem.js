@@ -29,8 +29,7 @@ export default function GalleryItem({src, index, columnOffset}) {
         >
             <div className={cn("gallery-item-image", {reveal: onScreen})}>
                 <div className="gallery-item-imgInner"
-                    style={{backgroundImage: `url(${src})`}}
-                >
+                    style={{backgroundImage: `url(${src})`}}>
                 </div>
             </div>
         </div>
