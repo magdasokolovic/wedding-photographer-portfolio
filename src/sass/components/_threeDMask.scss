@@ -34,7 +34,8 @@ $font-header: 'Italiana', serif;
     justify-content: center;
   }
   .mask-title {
-    font-family: $font-header;
+    font-family: $font-main;
+    font-style: italic;
     font-size: 10rem;
     text-align: center;
     width: 100%;

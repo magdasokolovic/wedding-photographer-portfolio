@@ -31,11 +31,11 @@ const Gallery = () => {
                     <div className="content">
                         <div className="gallery">
                             {images}
-                            <div className="gallery-helper" data-scroll data-scroll-speed={-1}>
+                            {/* <div className="gallery-helper" data-scroll data-scroll-speed={-1}>
                                 Keep scrolling
-                            </div>
+                            </div> */}
                             <div className="behind-text fill" data-scroll data-scroll-speed={-1}>
-                                I capture your love
+                                nežinau ką čią parašyti...
                             </div>
                         </div>
                     </div>
