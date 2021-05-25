@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "./static/css/main.3f9643bc.chunk.css",
-    "main.js": "./static/js/main.8686e774.chunk.js",
-    "main.js.map": "./static/js/main.8686e774.chunk.js.map",
+    "main.css": "./static/css/main.85473d74.chunk.css",
+    "main.js": "./static/js/main.b73b27c9.chunk.js",
+    "main.js.map": "./static/js/main.b73b27c9.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.9be83e15.js",
     "runtime-main.js.map": "./static/js/runtime-main.9be83e15.js.map",
-    "static/js/2.861bbbb7.chunk.js": "./static/js/2.861bbbb7.chunk.js",
-    "static/js/2.861bbbb7.chunk.js.map": "./static/js/2.861bbbb7.chunk.js.map",
+    "static/js/2.d69c3814.chunk.js": "./static/js/2.d69c3814.chunk.js",
+    "static/js/2.d69c3814.chunk.js.map": "./static/js/2.d69c3814.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.3f9643bc.chunk.css.map": "./static/css/main.3f9643bc.chunk.css.map",
-    "static/js/2.861bbbb7.chunk.js.LICENSE.txt": "./static/js/2.861bbbb7.chunk.js.LICENSE.txt",
+    "static/css/main.85473d74.chunk.css.map": "./static/css/main.85473d74.chunk.css.map",
+    "static/js/2.d69c3814.chunk.js.LICENSE.txt": "./static/js/2.d69c3814.chunk.js.LICENSE.txt",
     "static/media/final-bride-video.88551477.mp4": "./static/media/final-bride-video.88551477.mp4"
   },
   "entrypoints": [
     "static/js/runtime-main.9be83e15.js",
-    "static/js/2.861bbbb7.chunk.js",
-    "static/css/main.3f9643bc.chunk.css",
-    "static/js/main.8686e774.chunk.js"
+    "static/js/2.d69c3814.chunk.js",
+    "static/css/main.85473d74.chunk.css",
+    "static/js/main.b73b27c9.chunk.js"
   ]
 }
