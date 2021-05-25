@@ -9,13 +9,17 @@
 
 ## Things I learn about: 
 
+
 - ### Images: 
 - Home page images are living in the public folder. They are .webp images which come with fallbacks ( -jpg format) for lame browsers who don't support .webp formats - the former are half the size of jpg format. 
 
 > WebP is a modern image format that provides superior lossless and lossy compression for images on the web. 
+***
 
 - ### CSS: 
 - *white-space: nowrap;* the text will never wrap to the next line
+
+***
 
 - ### [Framer-Motion](https://www.framer.com/api/motion/):
 1. *AnimateSharedLayout* component enables to perform layout animations between different components that share the same *layoutId*. By adding *type="crossfade"* to AnimateSharedLayout, immediate children of AnimatePresence will crossfade with their old component, smoothing this transition.
@@ -49,17 +53,22 @@ The returned AnimationControls should be passed to the animate property of the c
 
 These components can then be animated with the **start** method.
 
+***
+
 - ### [Locomotive Scroll](https://github.com/locomotivemtl/locomotive-scroll) 
 Detection of elements in viewport & smooth scrolling with parallax effects.
 - In order to get a parallax effect add "data-scroll" and speed, for example: "data-scroll-speed={-1}" to the element 
+***
 
 - ### [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) and useInView hook from 'react-intersection-observer' 
 - they tell  when an element enters or leaves the viewport. 
 
+***
+
 - ### [react-three-fiber](react-three-fiber)[https://docs.pmnd.rs/react-three-fiber/getting-started/loading-models]
 - ### [https://github.com/pmndrs/drei](https://github.com/pmndrs/drei) 
+ A growing collection of useful helpers and abstractions for react-three-fiber.
 
-- A growing collection of useful helpers and abstractions for react-three-fiber.
-
+***
 - In order to make horizontall-scroll Gallery work on my main Page which is made with a help of framer-motion I needed to add the gallery component to [iFrame](https://www.hostinger.com/tutorials/what-is-iframe/) : 
 > > An iFrame is a frame within a frame. It is a component of an HTML element that allows you to embed documents, videos, and interactive media within a page.
