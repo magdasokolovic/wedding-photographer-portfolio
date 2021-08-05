@@ -46,7 +46,7 @@ function App() {
                       <Banner />
                       {!loading && (
                         <div className="transition-image final">
-                          <motion.img src={process.env.PUBLIC_URL + `/images/image-8.jpg`} alt='wedding couple' layoutId="main-image-1"
+                          <motion.img src={process.env.PUBLIC_URL + `/images/image-8.webp`} alt='wedding couple' layoutId="main-image-1"
                           transition= {{ease: [.6, 0.01, -.05, .95],duration: 1.6}}/>
                         </div>
                       )} 

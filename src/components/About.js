@@ -40,12 +40,10 @@ import {useInView} from 'react-intersection-observer'
                 <div className='detailed-information' >
                         <div className='about-container'>
                             <div className='about-row'>
-                                {/* <div className="about-content"> */}
                                     <p>
                                     Studijuojant dėstytojai turėjo labai skeptišką požiūrį dėl vestuvių fotografavimo. Sakydavo, kad tai ne menas, todėl ir mano požiūris buvo toks pat. Tačiau kartą mano draugai paprašė fotografuoti jų vestuvėse. Kai paviešinome tuoktuvių nuotraukas socialiniuose tinkluose, suaukiau labai didelio susidomėjimo ir prašymų fotografuoti vestuves. Kadangi nesu iš tų žmonių, kurie bijo, nutariau tam ryžtis.
                                     </p>
-                                {/* </div> */}
-                                
+                            
                             </div>
                         </div>
                 </div>
