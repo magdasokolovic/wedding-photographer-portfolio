@@ -18,7 +18,6 @@ const Model = () => {
       <>
         {/* Ambient Light illuminates lights for all objects */}
         <ambientLight intensity={0.3} />
-        {/* Diretion light */}
         <directionalLight position={[10, 10, 5]} intensity={1} />
         <directionalLight
           castShadow

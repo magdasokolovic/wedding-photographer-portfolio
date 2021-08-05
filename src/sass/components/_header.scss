@@ -3,8 +3,16 @@
     height: 156px;
     display: flex;
     justify-content: center;
-    // padding: 0 108px;
     color: $black;
+    @media (max-width: $layout-breakpoint-medium) {
+        padding: 0 72px;
+        font-size: 1.6rem;
+      }
+      @media (max-width: $layout-breakpoint-xsmall) {
+        padding: 0 12px;
+        height: 96px;
+        font-size: 1.2rem;
+    }
 
     .header-inner {
         width: 100%;
@@ -15,6 +23,10 @@
         .logo {
             font-weight: 700;
             font-size: 3.6rem;
+            @media (max-width: $layout-breakpoint-medium) {
+                font-size: 3.2rem;
+                flex: 4;
+              }
             a {
                 text-decoration: none;
                 color: $black;
@@ -22,6 +34,9 @@
 
         }
         .nav {
+            @media (max-width: $layout-breakpoint-medium) {
+                display: none;
+              }
             display: flex;
             align-items: center;
             justify-content: center;
@@ -40,12 +55,18 @@
         }
         
         .contact {
+            @media (max-width: $layout-breakpoint-medium) {
+                flex: 1;
+              }
             a {
                 color: $black;
                 text-decoration: none;
                 border-bottom: 2px solid $black;
                 padding-bottom: 12px;
                 white-space: nowrap;
+                @media (max-width: $layout-breakpoint-xsmall) {
+                    border: none;
+                  }
             }
         }
         .hamburger-menu {

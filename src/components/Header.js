@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {motion} from 'framer-motion'
 
-const Header = ({onCursor}) => {
+const Header = () => {
     return (
         <motion.div className="header"
             initial={{opacity: 0, y: -180}}
@@ -16,8 +16,6 @@ const Header = ({onCursor}) => {
                 
                 <div className="logo"
                 >
-                    {/* onMouseEnter={()=>onCursor('hovered')}
-                onMouseLeave={onCursor} */}
                     <Link to="/">Ana Rosso</Link>
                 </div>
 
@@ -27,11 +25,7 @@ const Header = ({onCursor}) => {
                     </li>
 
                     <li>
-                        <Link to="./gallery">Gallery</Link>
-                    </li>
-
-                    <li>
-                        <Link to="./instagram">Instagram</Link>
+                        <a href="https://www.instagram.com/anarosso_photography/">Instagram</a>
                     </li>
                 </nav>
                 

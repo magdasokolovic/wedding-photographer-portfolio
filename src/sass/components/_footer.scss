@@ -1,9 +1,16 @@
 .footer-nav {
-    // display: flex;
-    // align-items: flex-end;
-    // justify-content: center;
     height: 200px;
-    // margin-top: 200px;
+    @media (max-width: $layout-breakpoint-medium) {
+        padding: 0 72px;
+        font-size: 1.6rem;
+        height: auto;
+      }
+      @media (max-width: $layout-breakpoint-xsmall) {
+        padding: 0 12px;
+        height: 96px;
+        font-size: 1.2rem;
+    }
+
     .footer-container {
         flex-grow: 1;
         margin: 0 auto;
@@ -17,6 +24,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: $layout-breakpoint-medium) {
+            flex-direction: column;
+          }
         .footer-content {
             display: flex;
             flex-direction: column;

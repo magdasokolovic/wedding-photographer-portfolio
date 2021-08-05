@@ -1,10 +1,6 @@
 import {useEffect, useState} from 'react';
 import {HashRouter} from 'react-router-dom'
-
 import {motion, AnimatePresence, AnimateSharedLayout} from 'framer-motion'
-// context: 
-// import { GlobalProvider } from './context/globalContext';
-// , useGlobalDispatchContext, useGlobalStateContext
 import './sass/main.scss';
 
 //Components: 
@@ -17,7 +13,7 @@ import HomeVideo from './components/HomeVideo';
 import ThreeDMask from './components/3d-mask/threeDMask';
 import CustomCursor from './components/customCursor';
 import Footer from './components/Footer';
-import Gallery from './pages/Gallery/Gallery';
+
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -31,6 +27,7 @@ function App() {
 
 
   return (
+    <HashRouter>
           <AnimateSharedLayout type="crossfade">
             <AnimatePresence>
             <CustomCursor/>
@@ -55,17 +52,12 @@ function App() {
                       )} 
                     
                     <About />
-                    <HomeVideo/>
+                    <HomeVideo/> 
                     <ThreeDMask />
                     <Footer/>
                     
                 </div>
 
-                <iframe
-                  title="gallery"
-                  src="/?gallery"
-                  style={{height: "100vh", width: "100%"}}
-                />
                 
 
               </>
@@ -73,20 +65,11 @@ function App() {
           </AnimatePresence>
         </AnimateSharedLayout>
 
-    
+    </HashRouter>
     
   );
 }
 
-function RoutedApp() {
-  console.warn(window.location.search);
 
-  return (
-    <HashRouter>
-      {window.location.search.includes("?gallery") ? <Gallery /> : <App />}
-    </HashRouter>
 
-  )
-}
-
-export default RoutedApp;
+export default App;
