@@ -67,7 +67,7 @@ export default function ThreeDMask() {
   const animation = useAnimation()
   const [heartRef, inView] = useInView({
        // if you scroll back up it won't show the animation for the second time
-      triggerOnce: true,
+      triggerOnce: false,
       //in order to take user longer to scroll until the animation occurs use rootMargin
       // rootMargin: '-300px'
   })

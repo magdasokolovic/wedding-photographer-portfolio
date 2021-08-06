@@ -21,21 +21,9 @@
     position: relative;
     width: auto;
     height: 100%;
-
-    // @media (min-width: 1024px) {
-    //     max-width: 960px;
-    // }
-
-    // @media (min-width: 1216px) {
-    //     max-width: 1152px;
-    // }
-
-    // @media (min-width: 1408px) {
-    //     max-width: 1244px;
-    // }
 }
 .featured-content {
-    // height: 480px;
+
     width: 100%;
     padding: 56px 124px;
     box-sizing: border-box;
@@ -66,8 +54,9 @@
         line-height: 90px;
         margin: 0;
         @media (max-width: $layout-breakpoint-small) {
-            font-size: 3rem;
-            line-height: normal;
+            // font-size: 3rem;
+            // line-height: normal;
+            display: none;
         }
         .arrow {
             width: 120px;

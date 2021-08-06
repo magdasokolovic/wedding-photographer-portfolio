@@ -58,6 +58,14 @@
                 }
             }
         }
+        .footer-social-container {
+            @media (max-width: $layout-breakpoint-small) {
+                width: 100%;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: row;
+            }
+        }
         .footer-social {
             display: flex;
             position: relative;
@@ -72,6 +80,8 @@
                     height: 2.5rem;
                     padding: 4px;
                     margin: 0 .7em 1em;
+                    display: flex;
+
                 }
                 svg {
                     width: 100%;
