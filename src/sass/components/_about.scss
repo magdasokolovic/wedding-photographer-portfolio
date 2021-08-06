@@ -1,6 +1,8 @@
 .detailed-information {
     margin-top: 200px;
-    // height: 600px;
+    @media (max-width: $layout-breakpoint-small) {
+        margin-top: 0;       
+    }
 
     .about-container {
         .about-row {
@@ -22,9 +24,6 @@
                 justify-content: space-between;
                 align-items: center;
             }
-            // h2 {
-            //     font-size: 4rem;
-            //   }
               p {
                 text-align: center;
                 font-size: 3rem;
@@ -33,6 +32,12 @@
                 font-weight: 400;
                 width: 600px;
                 color: $black;
+
+                @media (max-width: $layout-breakpoint-small) {
+                    font-size: 1.5rem;
+                    width: 400px;
+                    line-height: 1.5;
+                }
             }
         }
 

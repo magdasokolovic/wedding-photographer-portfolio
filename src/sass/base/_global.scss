@@ -12,4 +12,8 @@ body {
 .container {
   max-width: 1500px;
   margin: 0 auto;
+
+  @media (max-width: $layout-breakpoint-small) {
+    max-width: 90%;
+  }
 }

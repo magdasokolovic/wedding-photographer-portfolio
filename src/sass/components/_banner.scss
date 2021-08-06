@@ -8,7 +8,7 @@
         align-items: center;
         @media (max-width: $layout-breakpoint-medium) {
             &:first-child {
-              margin-top: 48px;
+              margin-top: 0;
             }
         }
         &.center {
@@ -31,9 +31,9 @@
             letter-spacing: -0.8rem;
             display: inline-block;
             white-space: nowrap;
-            @media (max-width: $layout-breakpoint-xsmall) {
-                font-size: 13rem;
-              }
+            @media (max-width: $layout-breakpoint-small) {
+                font-size: 9rem;
+            }
         }
         .row-col {
             width: 50%;
@@ -101,6 +101,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: $layout-breakpoint-small) {
+      top: -56px;
+      height: auto;
+    }
     img{
         width: 600px;
         display: flex;

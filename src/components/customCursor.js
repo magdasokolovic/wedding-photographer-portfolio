@@ -1,7 +1,8 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useRef, useEffect, useState} from 'react'
+import {motion} from "framer-motion"
 
-const CustomCursor = () => {
-
+const CustomCursor = ({cursorHovered}) => {
+    // const [cursorHovered, setCursorHovered] = useState(false)
     const cursorRef = useRef(null)
 
     useEffect(() => {
@@ -14,7 +15,14 @@ const CustomCursor = () => {
     }, [])
 
     return (
-        <div className="custom-cursor" ref={cursorRef}></div>
+        <motion.div 
+        className="custom-cursor" 
+        ref={cursorRef}
+        animate={{
+            scale: cursorHovered ? 2 : 1, 
+            opacity: cursorHovered ? 1 : 0
+        }}
+        ></motion.div>
     )
 }
 

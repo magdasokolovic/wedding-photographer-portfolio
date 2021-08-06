@@ -3,20 +3,23 @@ import {HashRouter} from 'react-router-dom'
 import {motion, AnimatePresence, AnimateSharedLayout} from 'framer-motion'
 import './sass/main.scss';
 
+//Hooks:
+import useMousePosition from './hooks/useMousePosition'
 //Components: 
 import Header from './components/Header'
 import Banner from './components/Banner'
 import Loader from './components/Loader'
-//Pages:
 import About from './components/About';
 import HomeVideo from './components/HomeVideo';
 import ThreeDMask from './components/3d-mask/threeDMask';
-import CustomCursor from './components/customCursor';
 import Footer from './components/Footer';
 
 
 function App() {
   const [loading, setLoading] = useState(true)
+  const [cursorHovered, setCursorHovered] = useState(false)
+
+  const {x, y} = useMousePosition()
 
   useEffect(() => {
     loading 
@@ -30,8 +33,23 @@ function App() {
     <HashRouter>
           <AnimateSharedLayout type="crossfade">
             <AnimatePresence>
-            <CustomCursor/>
-        
+            {/* <CustomCursor cursorHovered={cursorHovered}/> */}
+            <motion.div 
+            className="custom-cursor"
+            animate={{
+              x: x - 24, 
+              y: y - 24,
+              scale: cursorHovered ? 1.3 : 1
+            }}
+            transition={{
+              ease: "linear", 
+              duration: .2
+            }}
+            style={{
+              background: cursorHovered ? "none" : "#ba181b",
+              border: cursorHovered ? "2px solid #ba181b" : "none"
+            }}
+            ></motion.div>
             {loading ? (
               <motion.div key="loader">
                   <Loader setLoading={setLoading} />
@@ -42,7 +60,7 @@ function App() {
               
                 <div className="container">
                   
-                      <Header/>
+                      <Header setCursorHovered={setCursorHovered}/>
                       <Banner />
                       {!loading && (
                         <div className="transition-image final">
@@ -52,9 +70,9 @@ function App() {
                       )} 
                     
                     <About />
-                    <HomeVideo/> 
+                    <HomeVideo setCursorHovered={setCursorHovered}/> 
                     <ThreeDMask />
-                    <Footer/>
+                    <Footer setCursorHovered={setCursorHovered}/>
                     
                 </div>
 

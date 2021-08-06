@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {motion} from 'framer-motion'
 
-const Header = () => {
+const Header = ({setCursorHovered}) => {
     return (
         <motion.div className="header"
             initial={{opacity: 0, y: -180}}
@@ -14,26 +14,31 @@ const Header = () => {
             }}>
             <div className="header-inner">
                 
-                <div className="logo"
+                <div className="logo" 
+                onMouseEnter={()=>setCursorHovered(true)}
+                onMouseLeave={()=>setCursorHovered(false)}
                 >
                     <Link to="/">Ana Rosso</Link>
                 </div>
 
                 <nav className="nav">
-                    <li>
+                    <li onMouseEnter={()=>setCursorHovered(true)} onMouseLeave={()=>setCursorHovered(false)}>
                         <Link to="./about">About</Link>
                     </li>
 
-                    <li>
+                    <li onMouseEnter={()=>setCursorHovered(true)} onMouseLeave={()=>setCursorHovered(false)}>
                         <a href="https://www.instagram.com/anarosso_photography/">Instagram</a>
                     </li>
                 </nav>
                 
-                <div className="contact">
+                <div className="contact" onMouseEnter={()=>setCursorHovered(true)} onMouseLeave={()=>setCursorHovered(false)}>
                     <Link to="./contact">Book me!</Link>
                  </div>
 
-                <div className="hamburger-menu">
+                <div className="hamburger-menu" 
+                    onMouseEnter={()=>setCursorHovered(true)}
+                    onMouseLeave={()=>setCursorHovered(false)}
+                >
                     <span></span>
                     <span></span>
                 </div>

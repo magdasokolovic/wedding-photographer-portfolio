@@ -57,8 +57,6 @@ const BannerDescriptionTop = ({title}) => {
             <div className="row-col">
                 <AnimatedLetters title={title}
                 />
-
-                
             </div>
 
             <motion.div className="row-col" 

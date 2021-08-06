@@ -4,7 +4,7 @@ import {motion} from 'framer-motion';
 
 
 
-const Footer = () => {
+const Footer = ({setCursorHovered}) => {
 
     return (
         <div className="container">
@@ -21,27 +21,34 @@ const Footer = () => {
                       }}
                       >
                         <div className="footer-content">
-                            <p>015204248662</p>
-                            <p>magda.sokolovic@gmail.com</p>
+                            <p onMouseEnter={()=>setCursorHovered(true)} 
+                        onMouseLeave={()=>setCursorHovered(false)}>015204248662</p>
+                            <p onMouseEnter={()=>setCursorHovered(true)} 
+                        onMouseLeave={()=>setCursorHovered(false)}>magda.sokolovic@gmail.com</p>
                         
 
                         </div>
                         <div className="footer-content wider">
-                            <p>Rhinstasse 88</p>
-                            <p>10315 Berlin, Germany</p>
+                            <p onMouseEnter={()=>setCursorHovered(true)} 
+                        onMouseLeave={()=>setCursorHovered(false)}>Rhinstasse 88</p>
+                            <p onMouseEnter={()=>setCursorHovered(true)} 
+                        onMouseLeave={()=>setCursorHovered(false)}>10315 Berlin, Germany</p>
                         </div>
                         
-                        <div className="footer-social">
+                        <div className="footer-social" onMouseEnter={()=>setCursorHovered(true)} 
+                    onMouseLeave={()=>setCursorHovered(false)}>
                             <a href="https://www.instagram.com/anarosso_photography/?fbclid=IwAR1EzFcutx77Sl8ZwvF4QTejsJE7ma9PN83PDRBZ4Di9lgaAklLaBGxoxbE">
                                 <Instagram/>
                             </a>
                        
-                        <div className="footer-social">
+                        <div className="footer-social" onMouseEnter={()=>setCursorHovered(true)} 
+                    onMouseLeave={()=>setCursorHovered(false)}>
                             <a href="https://www.facebook.com/anarossophotography">
                                 <Facebook/>
                             </a>
                         </div>
-                        <div className="footer-social">
+                        <div className="footer-social" onMouseEnter={()=>setCursorHovered(true)} 
+                        onMouseLeave={()=>setCursorHovered(false)}>
                             <a href="/">
                                 <Vimeo/>
                             </a>

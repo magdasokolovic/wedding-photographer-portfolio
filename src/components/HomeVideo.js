@@ -9,7 +9,7 @@ import video from '../video/final-bride-video.mp4'
 // Scroll behaviour:
 
 
-const HomeVideo = () => {
+const HomeVideo = ({setCursorHovered}) => {
     const [hovered, setHovered] = useState(false)
 
     const animation = useAnimation()
@@ -47,9 +47,9 @@ const HomeVideo = () => {
                     <motion.div className="featured-content"
                         onHoverStart={()=>setHovered(!hovered)}
                         onHoverEnd={()=>setHovered(!hovered)}
+
                         >
                         <div className="flex-container">
-                            {/* <h3>featured project</h3> */}
                             <div className="meta">
                                 <h4>Special Day</h4>
                                 <h4>June 06, 2020</h4>
@@ -61,6 +61,7 @@ const HomeVideo = () => {
                             transition={{duration: .6, ease: [0.6, .05, -.01, .9]}}>Karina & <br/> Tom's wedding</motion.h2>
                             <span className="arrow">
                                 <motion.svg
+                                    
                                     animate={{x: hovered ? 48 : 0}}
                                     transition={{duration: .6, ease: [0.6, .05, -.01, .9]}}
                                     xmlns="http://www.w3.org/2000/svg"
@@ -75,9 +76,9 @@ const HomeVideo = () => {
                             </span>
                         </div>
                     </motion.div>
-                    <div className="featured-video">
-                        <video loop autoPlay width="100%" src={video}>
-                            {/* controls  */}
+                    <div className="featured-video" 
+                    >
+                        <video loop autoPlay width="100%" src={video}>  
                         </video>
                     </div>
                 </Link>
@@ -85,7 +86,11 @@ const HomeVideo = () => {
             <div className="video-section-container">
                 <div className="featured-projects">
                     <div className="flex-end">
-                        <button>
+                        <button 
+                        onMouseEnter={()=>setCursorHovered(true)}
+                        onMouseLeave={()=>setCursorHovered(false)}
+                        style={{background: setCursorHovered ? "2px solid #191919" : "none"}}
+                        >
                             <span>Featured Photos</span>
                         </button>
                     </div>

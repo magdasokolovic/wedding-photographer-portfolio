@@ -3,15 +3,14 @@ $font-header: 'Italiana', serif;
 
 .three-d-container {
 
-  // background: $background;
     transition: 0.4s ease-in-out;
-    // width: 100vw;
     height: 100vh;
-    // width: 100%;
-    // height: 100%;
     margin-bottom: 200px;
     padding: 0;
     overflow: hidden;
+    @media (max-width: $layout-breakpoint-small) {
+      margin-bottom: 1em;
+    }
 }
 
 
@@ -20,7 +19,7 @@ $font-header: 'Italiana', serif;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    max-height: 100vh;
     overflow: auto;
   }
   
@@ -44,32 +43,10 @@ $font-header: 'Italiana', serif;
     span {
       display: block;
     }
-    @media (max-width: 1440px) {
-      font-size: 6rem;
+    @media (max-width: $layout-breakpoint-small) {
+      font-size: 3rem;
     }
   }
   
-  // .loading {
-  //     position: absolute;
-  //     top: 0px;
-  //     left: 0px;
-  //     width: 100%;
-  //     height: 100%;
-  //     background: #171717;
-  //     display: flex;
-  //     align-items: center;
-  //     justify-content: center;
-  //     z-index: 1000;
-  //   }
-    
-  //   .loading-bar-container {
-  //     width: 100px;
-  //     height: 32px;
-  //     background: #272727;
-  //   }
-    
-  //   .loading-bar {
-  //     height: 32px;
-  //     background: red;
-  //   }
+
     

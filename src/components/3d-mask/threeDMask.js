@@ -69,7 +69,7 @@ export default function ThreeDMask() {
        // if you scroll back up it won't show the animation for the second time
       triggerOnce: true,
       //in order to take user longer to scroll until the animation occurs use rootMargin
-      rootMargin: '-300px'
+      // rootMargin: '-300px'
   })
 
   useEffect(()=>{
