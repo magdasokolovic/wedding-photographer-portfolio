@@ -1,7 +1,5 @@
 import React from 'react'
 import {Instagram, Facebook, Vimeo} from '../svg/social-icons'
-import {motion} from 'framer-motion';
-
 
 
 const Footer = ({setCursorHovered}) => {
@@ -10,16 +8,7 @@ const Footer = ({setCursorHovered}) => {
         <div className="container">
             <div className="footer-nav">
                 <div className="footer-container">
-                    <motion.div className="footer-flex-container" 
-                    initial={{
-                        opacity: 0, 
-                        y: 40}}
-                      animate={{
-                        opacity: 1,
-                        y: 0,
-                        transition: {delay: 1.2}
-                      }}
-                      >
+                    <div className="footer-flex-container">
                         <div className="footer-content">
                             <p onMouseEnter={()=>setCursorHovered(true)} 
                         onMouseLeave={()=>setCursorHovered(false)}>015204248662</p>
@@ -54,7 +43,7 @@ const Footer = ({setCursorHovered}) => {
                             </a>
                         </div>
                         </div>
-                    </motion.div>
+                    </div>
 
                 </div>
             </div>

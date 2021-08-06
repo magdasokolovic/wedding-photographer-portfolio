@@ -1,26 +1,26 @@
 .footer-nav {
     height: 200px;
     @media (max-width: $layout-breakpoint-medium) {
-        padding: 0 72px;
+        // padding: 0 72px;
+
         font-size: 1.6rem;
-        height: auto;
       }
-      @media (max-width: $layout-breakpoint-xsmall) {
-        padding: 0 12px;
-        height: 100%;
-        font-size: 1.2rem;
-    }
+    //   @media (max-width: $layout-breakpoint-xsmall) {
+    //     padding: 0 12px;
+    //     height: 100%;
+    //     font-size: 1.2rem;
+    // }
 
     .footer-container {
-        flex-grow: 1;
+        // flex-grow: 1;
         margin: 0 auto;
         padding: 0 32px;
         position: relative;
         width: auto;
         height: 100%;
-        @media (max-width: $layout-breakpoint-xsmall) {
-            flex-grow: 0;
-        }
+        // @media (max-width: $layout-breakpoint-xsmall) {
+        //     flex-grow: 2;
+        // }
     }
     .footer-flex-container {
         position: relative;
@@ -29,6 +29,7 @@
         justify-content: space-between;
         @media (max-width: $layout-breakpoint-medium) {
             flex-direction: column;
+            height: 100%;
           }
         .footer-content {
             display: flex;
@@ -40,11 +41,20 @@
             font-weight: 600;
             line-height: .5rem;
             flex: 1;
-            // height: 60px;
+            height: 60px;
+            @media (max-width: $layout-breakpoint-small) {
+                flex: 0;
+                line-height: 1.2;
+                margin-left: 0;
+                width: 100%;
+
+
+            }
             .wider {
                 flex: 2;
                 @media (max-width: $layout-breakpoint-small) {
-                    visiblity: hidden;
+                    flex: 0;
+                    width: 100%;
                 }
             }
         }
@@ -61,6 +71,7 @@
                     width: 2.5rem;
                     height: 2.5rem;
                     padding: 4px;
+                    margin: 0 .7em 1em;
                 }
                 svg {
                     width: 100%;
